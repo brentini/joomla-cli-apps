@@ -135,7 +135,9 @@ class Install extends JApplicationCli
 		if ($cleanupDir)
 		{
 			JFolder::delete($sourceDir);
-		}	
+		}
+		// return the boolean inverse; shell expects 0 for no error and 1 for error
+		return !$result;
 	}
 }
 
